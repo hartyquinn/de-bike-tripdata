@@ -1,0 +1,29 @@
+[2022-04-07 00:58:02,346] {taskinstance.py:903} INFO - Dependencies all met for <TaskInstance: divvybikes_elt_pipeline.gcs_to_external_table_Task 2022-01-01T00:00:00+00:00 [None]>
+[2022-04-07 00:58:02,354] {taskinstance.py:903} INFO - Dependencies all met for <TaskInstance: divvybikes_elt_pipeline.gcs_to_external_table_Task 2022-01-01T00:00:00+00:00 [None]>
+[2022-04-07 00:58:02,355] {taskinstance.py:1094} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-07 00:58:02,355] {taskinstance.py:1095} INFO - Starting attempt 1 of 2
+[2022-04-07 00:58:02,355] {taskinstance.py:1096} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-07 00:58:02,366] {taskinstance.py:1114} INFO - Executing <Task(BigQueryCreateExternalTableOperator): gcs_to_external_table_Task> on 2022-01-01T00:00:00+00:00
+[2022-04-07 00:58:02,370] {standard_task_runner.py:52} INFO - Started process 1638 to run task
+[2022-04-07 00:58:02,373] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'divvybikes_elt_pipeline', 'gcs_to_external_table_Task', '2022-01-01T00:00:00+00:00', '--job-id', '257', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/extract_load.py', '--cfg-path', '/tmp/tmpyecz7ppu', '--error-file', '/tmp/tmpis3pfnpu']
+[2022-04-07 00:58:02,375] {standard_task_runner.py:77} INFO - Job 257: Subtask gcs_to_external_table_Task
+[2022-04-07 00:58:02,410] {logging_mixin.py:109} INFO - Running <TaskInstance: divvybikes_elt_pipeline.gcs_to_external_table_Task 2022-01-01T00:00:00+00:00 [running]> on host afa4c4c5de3b
+[2022-04-07 00:58:02,450] {taskinstance.py:1253} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=divvybikes_elt_pipeline
+AIRFLOW_CTX_TASK_ID=gcs_to_external_table_Task
+AIRFLOW_CTX_EXECUTION_DATE=2022-01-01T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=backfill__2022-01-01T00:00:00+00:00
+[2022-04-07 00:58:02,452] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2022-04-07 00:58:02,461] {logging_mixin.py:109} WARNING - /home/***/.local/lib/python3.6/site-packages/***/providers/google/cloud/hooks/bigquery.py:637 DeprecationWarning: This method is deprecated. Please use `BigQueryHook.create_empty_table` method withpass passing the `table_resource` object. This gives more flexibility than this method.
+[2022-04-07 00:58:02,462] {bigquery.py:700} INFO - Creating external table: sturdy-dogfish-344515.divvybikes_data_all.external_table
+[2022-04-07 00:58:03,301] {bigquery.py:704} INFO - External table created successfully: sturdy-dogfish-344515.divvybikes_data_all.external_table
+[2022-04-07 00:58:03,310] {taskinstance.py:1218} INFO - Marking task as SUCCESS. dag_id=divvybikes_elt_pipeline, task_id=gcs_to_external_table_Task, execution_date=20220101T000000, start_date=20220407T005802, end_date=20220407T005803
+[2022-04-07 00:58:03,349] {local_task_job.py:151} INFO - Task exited with return code 0
+[2022-04-07 00:58:03,367] {local_task_job.py:261} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-04-07 00:58:03,379] {dagrun.py:486} WARNING - Failed to get task '<TaskInstance: divvybikes_elt_pipeline.create_s3_connection 2022-01-01 00:00:00+00:00 [removed]>' for dag 'divvybikes_elt_pipeline'. Marking it as removed.
+[2022-04-07 00:58:03,381] {dagrun.py:486} WARNING - Failed to get task '<TaskInstance: divvybikes_elt_pipeline.upload_file_to_s3 2022-01-01 00:00:00+00:00 [removed]>' for dag 'divvybikes_elt_pipeline'. Marking it as removed.
+[2022-04-07 00:58:03,382] {dagrun.py:434} INFO - Marking run <DagRun divvybikes_elt_pipeline @ 2022-01-01 00:00:00+00:00: backfill__2022-01-01T00:00:00+00:00, externally triggered: False> successful
+[2022-04-07 00:58:03,383] {dagrun.py:604} WARNING - Failed to record duration of <DagRun divvybikes_elt_pipeline @ 2022-01-01 00:00:00+00:00: backfill__2022-01-01T00:00:00+00:00, externally triggered: False>: start_date is not set.

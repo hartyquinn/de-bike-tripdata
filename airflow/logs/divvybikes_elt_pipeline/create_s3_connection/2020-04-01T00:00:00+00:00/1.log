@@ -1,0 +1,23 @@
+[2022-04-01 20:23:51,159] {taskinstance.py:903} INFO - Dependencies all met for <TaskInstance: divvybikes_elt_pipeline.create_s3_connection 2020-04-01T00:00:00+00:00 [queued]>
+[2022-04-01 20:23:51,171] {taskinstance.py:903} INFO - Dependencies all met for <TaskInstance: divvybikes_elt_pipeline.create_s3_connection 2020-04-01T00:00:00+00:00 [queued]>
+[2022-04-01 20:23:51,171] {taskinstance.py:1094} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-01 20:23:51,171] {taskinstance.py:1095} INFO - Starting attempt 1 of 2
+[2022-04-01 20:23:51,171] {taskinstance.py:1096} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-01 20:23:51,178] {taskinstance.py:1114} INFO - Executing <Task(PythonOperator): create_s3_connection> on 2020-04-01T00:00:00+00:00
+[2022-04-01 20:23:51,180] {standard_task_runner.py:52} INFO - Started process 31349 to run task
+[2022-04-01 20:23:51,182] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'divvybikes_elt_pipeline', 'create_s3_connection', '2020-04-01T00:00:00+00:00', '--job-id', '83', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/extract_load.py', '--cfg-path', '/tmp/tmpaqtuhbrb', '--error-file', '/tmp/tmpz0i75wv1']
+[2022-04-01 20:23:51,184] {standard_task_runner.py:77} INFO - Job 83: Subtask create_s3_connection
+[2022-04-01 20:23:51,209] {logging_mixin.py:109} INFO - Running <TaskInstance: divvybikes_elt_pipeline.create_s3_connection 2020-04-01T00:00:00+00:00 [running]> on host b399ffa6f3b6
+[2022-04-01 20:23:51,241] {taskinstance.py:1253} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=divvybikes_elt_pipeline
+AIRFLOW_CTX_TASK_ID=create_s3_connection
+AIRFLOW_CTX_EXECUTION_DATE=2020-04-01T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=backfill__2020-04-01T00:00:00+00:00
+[2022-04-01 20:23:51,243] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2022-04-01 20:23:51,243] {python.py:151} INFO - Done. Returned value was: None
+[2022-04-01 20:23:51,251] {taskinstance.py:1218} INFO - Marking task as SUCCESS. dag_id=divvybikes_elt_pipeline, task_id=create_s3_connection, execution_date=20200401T000000, start_date=20220401T202351, end_date=20220401T202351
+[2022-04-01 20:23:51,275] {local_task_job.py:151} INFO - Task exited with return code 0
+[2022-04-01 20:23:51,292] {local_task_job.py:261} INFO - 0 downstream tasks scheduled from follow-on schedule check

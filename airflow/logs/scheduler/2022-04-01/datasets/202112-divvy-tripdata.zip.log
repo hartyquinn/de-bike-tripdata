@@ -1,0 +1,10 @@
+[2022-04-01 21:16:26,385] {processor.py:162} INFO - Started process (PID=27734) to work on /opt/airflow/dags/datasets/202112-divvy-tripdata.zip
+[2022-04-01 21:16:26,385] {processor.py:613} INFO - Processing file /opt/airflow/dags/datasets/202112-divvy-tripdata.zip for tasks to queue
+[2022-04-01 21:16:26,386] {logging_mixin.py:109} INFO - [2022-04-01 21:16:26,386] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/datasets/202112-divvy-tripdata.zip
+[2022-04-01 21:16:26,389] {processor.py:625} WARNING - No viable dags retrieved from /opt/airflow/dags/datasets/202112-divvy-tripdata.zip
+[2022-04-01 21:16:26,399] {processor.py:170} INFO - Processing /opt/airflow/dags/datasets/202112-divvy-tripdata.zip took 0.017 seconds
+[2022-04-01 21:16:56,468] {processor.py:162} INFO - Started process (PID=27780) to work on /opt/airflow/dags/datasets/202112-divvy-tripdata.zip
+[2022-04-01 21:16:56,469] {processor.py:613} INFO - Processing file /opt/airflow/dags/datasets/202112-divvy-tripdata.zip for tasks to queue
+[2022-04-01 21:16:56,469] {logging_mixin.py:109} INFO - [2022-04-01 21:16:56,469] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/datasets/202112-divvy-tripdata.zip
+[2022-04-01 21:16:56,472] {processor.py:625} WARNING - No viable dags retrieved from /opt/airflow/dags/datasets/202112-divvy-tripdata.zip
+[2022-04-01 21:16:56,483] {processor.py:170} INFO - Processing /opt/airflow/dags/datasets/202112-divvy-tripdata.zip took 0.016 seconds

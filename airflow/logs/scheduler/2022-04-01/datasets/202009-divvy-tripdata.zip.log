@@ -1,0 +1,5 @@
+[2022-04-01 20:49:17,527] {processor.py:162} INFO - Started process (PID=25590) to work on /opt/airflow/dags/datasets/202009-divvy-tripdata.zip
+[2022-04-01 20:49:17,528] {processor.py:613} INFO - Processing file /opt/airflow/dags/datasets/202009-divvy-tripdata.zip for tasks to queue
+[2022-04-01 20:49:17,528] {logging_mixin.py:109} INFO - [2022-04-01 20:49:17,528] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/datasets/202009-divvy-tripdata.zip
+[2022-04-01 20:49:17,531] {processor.py:625} WARNING - No viable dags retrieved from /opt/airflow/dags/datasets/202009-divvy-tripdata.zip
+[2022-04-01 20:49:17,540] {processor.py:170} INFO - Processing /opt/airflow/dags/datasets/202009-divvy-tripdata.zip took 0.015 seconds

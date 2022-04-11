@@ -1,0 +1,30 @@
+[2022-04-07 00:57:56,809] {taskinstance.py:903} INFO - Dependencies all met for <TaskInstance: divvybikes_elt_pipeline.remove_downloaded_files 2022-01-01T00:00:00+00:00 [None]>
+[2022-04-07 00:57:56,818] {taskinstance.py:903} INFO - Dependencies all met for <TaskInstance: divvybikes_elt_pipeline.remove_downloaded_files 2022-01-01T00:00:00+00:00 [None]>
+[2022-04-07 00:57:56,818] {taskinstance.py:1094} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-07 00:57:56,818] {taskinstance.py:1095} INFO - Starting attempt 2 of 3
+[2022-04-07 00:57:56,818] {taskinstance.py:1096} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-07 00:57:56,829] {taskinstance.py:1114} INFO - Executing <Task(BashOperator): remove_downloaded_files> on 2022-01-01T00:00:00+00:00
+[2022-04-07 00:57:56,833] {standard_task_runner.py:52} INFO - Started process 1634 to run task
+[2022-04-07 00:57:56,835] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'divvybikes_elt_pipeline', 'remove_downloaded_files', '2022-01-01T00:00:00+00:00', '--job-id', '256', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/extract_load.py', '--cfg-path', '/tmp/tmpdrb3gfnw', '--error-file', '/tmp/tmp4kmb7r2m']
+[2022-04-07 00:57:56,837] {standard_task_runner.py:77} INFO - Job 256: Subtask remove_downloaded_files
+[2022-04-07 00:57:56,867] {logging_mixin.py:109} INFO - Running <TaskInstance: divvybikes_elt_pipeline.remove_downloaded_files 2022-01-01T00:00:00+00:00 [running]> on host afa4c4c5de3b
+[2022-04-07 00:57:56,907] {taskinstance.py:1253} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=divvybikes_elt_pipeline
+AIRFLOW_CTX_TASK_ID=remove_downloaded_files
+AIRFLOW_CTX_EXECUTION_DATE=2022-01-01T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=backfill__2022-01-01T00:00:00+00:00
+[2022-04-07 00:57:56,909] {subprocess.py:52} INFO - Tmp dir root location: 
+ /tmp
+[2022-04-07 00:57:56,909] {subprocess.py:63} INFO - Running command: ['bash', '-c', 'rm -f /opt/***/dags/datasets/202201-divvy-tripdata.csv /opt/***/dags/datasets/202201-divvy-tripdata.parquet /opt/***/dags/datasets/202201-divvy-tripdata.zip _MACOSX ']
+[2022-04-07 00:57:56,917] {subprocess.py:74} INFO - Output:
+[2022-04-07 00:57:56,922] {subprocess.py:82} INFO - Command exited with return code 0
+[2022-04-07 00:57:56,943] {taskinstance.py:1218} INFO - Marking task as SUCCESS. dag_id=divvybikes_elt_pipeline, task_id=remove_downloaded_files, execution_date=20220101T000000, start_date=20220407T005756, end_date=20220407T005756
+[2022-04-07 00:57:56,968] {local_task_job.py:151} INFO - Task exited with return code 0
+[2022-04-07 00:57:56,986] {local_task_job.py:261} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-04-07 00:57:57,000] {dagrun.py:486} WARNING - Failed to get task '<TaskInstance: divvybikes_elt_pipeline.create_s3_connection 2022-01-01 00:00:00+00:00 [removed]>' for dag 'divvybikes_elt_pipeline'. Marking it as removed.
+[2022-04-07 00:57:57,002] {dagrun.py:486} WARNING - Failed to get task '<TaskInstance: divvybikes_elt_pipeline.upload_file_to_s3 2022-01-01 00:00:00+00:00 [removed]>' for dag 'divvybikes_elt_pipeline'. Marking it as removed.
+[2022-04-07 00:57:57,003] {dagrun.py:434} INFO - Marking run <DagRun divvybikes_elt_pipeline @ 2022-01-01 00:00:00+00:00: backfill__2022-01-01T00:00:00+00:00, externally triggered: False> successful
+[2022-04-07 00:57:57,005] {dagrun.py:604} WARNING - Failed to record duration of <DagRun divvybikes_elt_pipeline @ 2022-01-01 00:00:00+00:00: backfill__2022-01-01T00:00:00+00:00, externally triggered: False>: start_date is not set.

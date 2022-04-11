@@ -1,0 +1,22 @@
+[2022-04-06 18:49:19,479] {taskinstance.py:903} INFO - Dependencies all met for <TaskInstance: divvybikes_elt_pipeline.upload_to_gcs_task 2022-02-01T00:00:00+00:00 [None]>
+[2022-04-06 18:49:19,491] {taskinstance.py:903} INFO - Dependencies all met for <TaskInstance: divvybikes_elt_pipeline.upload_to_gcs_task 2022-02-01T00:00:00+00:00 [None]>
+[2022-04-06 18:49:19,491] {taskinstance.py:1094} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-06 18:49:19,491] {taskinstance.py:1095} INFO - Starting attempt 7 of 8
+[2022-04-06 18:49:19,491] {taskinstance.py:1096} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-06 18:49:19,497] {taskinstance.py:1114} INFO - Executing <Task(PythonOperator): upload_to_gcs_task> on 2022-02-01T00:00:00+00:00
+[2022-04-06 18:49:19,501] {standard_task_runner.py:52} INFO - Started process 156 to run task
+[2022-04-06 18:49:19,503] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'divvybikes_elt_pipeline', 'upload_to_gcs_task', '2022-02-01T00:00:00+00:00', '--job-id', '241', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/extract_load.py', '--cfg-path', '/tmp/tmp0kjy0wq6', '--error-file', '/tmp/tmp9y5nbmj4']
+[2022-04-06 18:49:19,504] {standard_task_runner.py:77} INFO - Job 241: Subtask upload_to_gcs_task
+[2022-04-06 18:49:19,532] {logging_mixin.py:109} INFO - Running <TaskInstance: divvybikes_elt_pipeline.upload_to_gcs_task 2022-02-01T00:00:00+00:00 [running]> on host c653229d7f92
+[2022-04-06 18:49:19,571] {taskinstance.py:1253} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=divvybikes_elt_pipeline
+AIRFLOW_CTX_TASK_ID=upload_to_gcs_task
+AIRFLOW_CTX_EXECUTION_DATE=2022-02-01T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=backfill__2022-02-01T00:00:00+00:00
+[2022-04-06 18:49:27,988] {python.py:151} INFO - Done. Returned value was: None
+[2022-04-06 18:49:27,997] {taskinstance.py:1218} INFO - Marking task as SUCCESS. dag_id=divvybikes_elt_pipeline, task_id=upload_to_gcs_task, execution_date=20220201T000000, start_date=20220406T184919, end_date=20220406T184927
+[2022-04-06 18:49:28,026] {local_task_job.py:151} INFO - Task exited with return code 0
+[2022-04-06 18:49:28,044] {local_task_job.py:261} INFO - 1 downstream tasks scheduled from follow-on schedule check

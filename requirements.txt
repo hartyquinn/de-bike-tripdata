@@ -1,0 +1,9 @@
+zipfile2
+requests
+dagster_pandas
+dagster-postgres
+dagster-aws
+dagster 
+dagit 
+boto3 
+pyarrow 

@@ -1,0 +1,31 @@
+[2022-04-09 21:39:07,458] {taskinstance.py:903} INFO - Dependencies all met for <TaskInstance: divvybikes_elt_pipeline.clean_fact_trips_table 2022-02-01T00:00:00+00:00 [None]>
+[2022-04-09 21:39:07,474] {taskinstance.py:903} INFO - Dependencies all met for <TaskInstance: divvybikes_elt_pipeline.clean_fact_trips_table 2022-02-01T00:00:00+00:00 [None]>
+[2022-04-09 21:39:07,475] {taskinstance.py:1094} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-09 21:39:07,475] {taskinstance.py:1095} INFO - Starting attempt 11 of 12
+[2022-04-09 21:39:07,475] {taskinstance.py:1096} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-09 21:39:07,482] {taskinstance.py:1114} INFO - Executing <Task(BigQueryExecuteQueryOperator): clean_fact_trips_table> on 2022-02-01T00:00:00+00:00
+[2022-04-09 21:39:07,487] {standard_task_runner.py:52} INFO - Started process 9358 to run task
+[2022-04-09 21:39:07,490] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'divvybikes_elt_pipeline', 'clean_fact_trips_table', '2022-02-01T00:00:00+00:00', '--job-id', '323', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/extract_load.py', '--cfg-path', '/tmp/tmp3ldf4a26', '--error-file', '/tmp/tmp1xirc9re']
+[2022-04-09 21:39:07,492] {standard_task_runner.py:77} INFO - Job 323: Subtask clean_fact_trips_table
+[2022-04-09 21:39:07,528] {logging_mixin.py:109} INFO - Running <TaskInstance: divvybikes_elt_pipeline.clean_fact_trips_table 2022-02-01T00:00:00+00:00 [running]> on host afa4c4c5de3b
+[2022-04-09 21:39:07,565] {taskinstance.py:1253} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=divvybikes_elt_pipeline
+AIRFLOW_CTX_TASK_ID=clean_fact_trips_table
+AIRFLOW_CTX_EXECUTION_DATE=2022-02-01T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=backfill__2022-02-01T00:00:00+00:00
+[2022-04-09 21:39:07,567] {bigquery.py:677} INFO - Executing: DELETE FROM divvybikes_data_all.fact_trips
+WHERE COALESCE (fact_trips.ride_end, fact_trips.ride_start) IS NULL;
+[2022-04-09 21:39:07,567] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2022-04-09 21:39:07,573] {logging_mixin.py:109} WARNING - /home/***/.local/lib/python3.6/site-packages/***/providers/google/cloud/hooks/bigquery.py:2194 DeprecationWarning: This method is deprecated. Please use `BigQueryHook.insert_job` method.
+[2022-04-09 21:39:07,578] {bigquery.py:1638} INFO - Inserting job ***_1649540347577903_84e83d171065c6c6608cfc48cd4a09fa
+[2022-04-09 21:39:10,417] {taskinstance.py:1218} INFO - Marking task as SUCCESS. dag_id=divvybikes_elt_pipeline, task_id=clean_fact_trips_table, execution_date=20220201T000000, start_date=20220409T213907, end_date=20220409T213910
+[2022-04-09 21:39:10,474] {local_task_job.py:151} INFO - Task exited with return code 0
+[2022-04-09 21:39:10,496] {local_task_job.py:261} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-04-09 21:39:10,512] {dagrun.py:486} WARNING - Failed to get task '<TaskInstance: divvybikes_elt_pipeline.bq_staging_table_task 2022-02-01 00:00:00+00:00 [removed]>' for dag 'divvybikes_elt_pipeline'. Marking it as removed.
+[2022-04-09 21:39:10,514] {dagrun.py:486} WARNING - Failed to get task '<TaskInstance: divvybikes_elt_pipeline.create_s3_connection 2022-02-01 00:00:00+00:00 [removed]>' for dag 'divvybikes_elt_pipeline'. Marking it as removed.
+[2022-04-09 21:39:10,515] {dagrun.py:486} WARNING - Failed to get task '<TaskInstance: divvybikes_elt_pipeline.upload_file_to_s3 2022-02-01 00:00:00+00:00 [removed]>' for dag 'divvybikes_elt_pipeline'. Marking it as removed.
+[2022-04-09 21:39:10,515] {dagrun.py:434} INFO - Marking run <DagRun divvybikes_elt_pipeline @ 2022-02-01 00:00:00+00:00: backfill__2022-02-01T00:00:00+00:00, externally triggered: False> successful
+[2022-04-09 21:39:10,517] {dagrun.py:604} WARNING - Failed to record duration of <DagRun divvybikes_elt_pipeline @ 2022-02-01 00:00:00+00:00: backfill__2022-02-01T00:00:00+00:00, externally triggered: False>: start_date is not set.

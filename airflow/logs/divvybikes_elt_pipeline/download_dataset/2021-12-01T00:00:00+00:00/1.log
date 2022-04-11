@@ -1,0 +1,26 @@
+[2022-04-01 21:15:50,533] {taskinstance.py:903} INFO - Dependencies all met for <TaskInstance: divvybikes_elt_pipeline.download_dataset 2021-12-01T00:00:00+00:00 [queued]>
+[2022-04-01 21:15:50,556] {taskinstance.py:903} INFO - Dependencies all met for <TaskInstance: divvybikes_elt_pipeline.download_dataset 2021-12-01T00:00:00+00:00 [queued]>
+[2022-04-01 21:15:50,556] {taskinstance.py:1094} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-01 21:15:50,556] {taskinstance.py:1095} INFO - Starting attempt 1 of 2
+[2022-04-01 21:15:50,557] {taskinstance.py:1096} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-01 21:15:50,563] {taskinstance.py:1114} INFO - Executing <Task(BashOperator): download_dataset> on 2021-12-01T00:00:00+00:00
+[2022-04-01 21:15:50,567] {standard_task_runner.py:52} INFO - Started process 5065 to run task
+[2022-04-01 21:15:50,569] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'divvybikes_elt_pipeline', 'download_dataset', '2021-12-01T00:00:00+00:00', '--job-id', '201', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/extract_load.py', '--cfg-path', '/tmp/tmpfrqjcvsa', '--error-file', '/tmp/tmpp0hs5gxn']
+[2022-04-01 21:15:50,571] {standard_task_runner.py:77} INFO - Job 201: Subtask download_dataset
+[2022-04-01 21:15:50,600] {logging_mixin.py:109} INFO - Running <TaskInstance: divvybikes_elt_pipeline.download_dataset 2021-12-01T00:00:00+00:00 [running]> on host b399ffa6f3b6
+[2022-04-01 21:15:50,640] {taskinstance.py:1253} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=divvybikes_elt_pipeline
+AIRFLOW_CTX_TASK_ID=download_dataset
+AIRFLOW_CTX_EXECUTION_DATE=2021-12-01T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=backfill__2021-12-01T00:00:00+00:00
+[2022-04-01 21:15:50,641] {subprocess.py:52} INFO - Tmp dir root location: 
+ /tmp
+[2022-04-01 21:15:50,642] {subprocess.py:63} INFO - Running command: ['bash', '-c', 'curl -sSL https://divvy-tripdata.s3.amazonaws.com/202112-divvy-tripdata.zip > /opt/***/dags/datasets/202112-divvy-tripdata.zip']
+[2022-04-01 21:15:50,649] {subprocess.py:74} INFO - Output:
+[2022-04-01 21:15:59,343] {subprocess.py:82} INFO - Command exited with return code 0
+[2022-04-01 21:15:59,367] {taskinstance.py:1218} INFO - Marking task as SUCCESS. dag_id=divvybikes_elt_pipeline, task_id=download_dataset, execution_date=20211201T000000, start_date=20220401T211550, end_date=20220401T211559
+[2022-04-01 21:15:59,405] {local_task_job.py:151} INFO - Task exited with return code 0
+[2022-04-01 21:15:59,424] {local_task_job.py:261} INFO - 0 downstream tasks scheduled from follow-on schedule check

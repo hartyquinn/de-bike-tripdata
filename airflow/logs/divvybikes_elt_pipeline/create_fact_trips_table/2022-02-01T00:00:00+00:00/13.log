@@ -1,0 +1,73 @@
+[2022-04-09 21:27:58,016] {taskinstance.py:903} INFO - Dependencies all met for <TaskInstance: divvybikes_elt_pipeline.create_fact_trips_table 2022-02-01T00:00:00+00:00 [None]>
+[2022-04-09 21:27:58,030] {taskinstance.py:903} INFO - Dependencies all met for <TaskInstance: divvybikes_elt_pipeline.create_fact_trips_table 2022-02-01T00:00:00+00:00 [None]>
+[2022-04-09 21:27:58,030] {taskinstance.py:1094} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-09 21:27:58,030] {taskinstance.py:1095} INFO - Starting attempt 13 of 14
+[2022-04-09 21:27:58,030] {taskinstance.py:1096} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-09 21:27:58,038] {taskinstance.py:1114} INFO - Executing <Task(BigQueryInsertJobOperator): create_fact_trips_table> on 2022-02-01T00:00:00+00:00
+[2022-04-09 21:27:58,042] {standard_task_runner.py:52} INFO - Started process 8175 to run task
+[2022-04-09 21:27:58,045] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'divvybikes_elt_pipeline', 'create_fact_trips_table', '2022-02-01T00:00:00+00:00', '--job-id', '314', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/extract_load.py', '--cfg-path', '/tmp/tmplcphb7zb', '--error-file', '/tmp/tmpk_9wgxnf']
+[2022-04-09 21:27:58,047] {standard_task_runner.py:77} INFO - Job 314: Subtask create_fact_trips_table
+[2022-04-09 21:27:58,082] {logging_mixin.py:109} INFO - Running <TaskInstance: divvybikes_elt_pipeline.create_fact_trips_table 2022-02-01T00:00:00+00:00 [running]> on host afa4c4c5de3b
+[2022-04-09 21:27:58,122] {taskinstance.py:1253} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=divvybikes_elt_pipeline
+AIRFLOW_CTX_TASK_ID=create_fact_trips_table
+AIRFLOW_CTX_EXECUTION_DATE=2022-02-01T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=backfill__2022-02-01T00:00:00+00:00
+[2022-04-09 21:27:58,124] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2022-04-09 21:27:58,129] {bigquery.py:1638} INFO - Inserting job ***_divvybikes_elt_pipeline_create_fact_trips_table_2022_02_01T00_00_00_00_00_ff4b0b03b08ff6536424162e4d1a01e4
+[2022-04-09 21:27:59,319] {taskinstance.py:1462} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1164, in _run_raw_task
+    self._prepare_and_execute_task_with_callbacks(context, task)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1282, in _prepare_and_execute_task_with_callbacks
+    result = self._execute_task(context, task_copy)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1312, in _execute_task
+    result = task_copy.execute(context=context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/providers/google/cloud/operators/bigquery.py", line 2282, in execute
+    job = self._submit_job(hook, job_id)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/providers/google/cloud/operators/bigquery.py", line 2245, in _submit_job
+    job_id=job_id,
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/providers/google/common/hooks/base_google.py", line 425, in inner_wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/providers/google/cloud/hooks/bigquery.py", line 1640, in insert_job
+    job.result()
+  File "/home/airflow/.local/lib/python3.6/site-packages/google/cloud/bigquery/job/query.py", line 1371, in result
+    do_get_result()
+  File "/home/airflow/.local/lib/python3.6/site-packages/google/cloud/bigquery/job/query.py", line 1361, in do_get_result
+    super(QueryJob, self).result(retry=retry, timeout=timeout)
+  File "/home/airflow/.local/lib/python3.6/site-packages/google/cloud/bigquery/job/base.py", line 708, in result
+    return super(_AsyncJob, self).result(timeout=timeout, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/google/api_core/future/polling.py", line 135, in result
+    raise self._exception
+google.api_core.exceptions.BadRequest: 400 Unrecognized name: DATE at [2:14]
+
+(job ID: airflow_divvybikes_elt_pipeline_create_fact_trips_table_2022_02_01T00_00_00_00_00_ff4b0b03b08ff6536424162e4d1a01e4)
+
+                -----Query Job SQL Follows-----                
+
+    |    .    |    .    |    .    |    .    |    .    |
+   1:CREATE TABLE IF NOT EXISTS divvybikes_data_all.fact_trips 
+   2:PARTITION BY DATE
+   3:AS
+   4:SELECT 
+   5:ride_id,
+   6:rideable_type AS bike_type,
+   7:started_at AS ride_start,
+   8:ended_at AS ride_end, 
+   9:start_station_name,
+  10:start_station_id,
+  11:end_station_name,
+  12:end_station_id,
+  13:member_casual,
+  14:
+  15:FROM divvybikes_data_all.external_table ;
+    |    .    |    .    |    .    |    .    |    .    |
+[2022-04-09 21:27:59,321] {taskinstance.py:1512} INFO - Marking task as UP_FOR_RETRY. dag_id=divvybikes_elt_pipeline, task_id=create_fact_trips_table, execution_date=20220201T000000, start_date=20220409T212758, end_date=20220409T212759
+[2022-04-09 21:27:59,341] {local_task_job.py:151} INFO - Task exited with return code 1
+[2022-04-09 21:27:59,361] {local_task_job.py:261} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-04-09 21:27:59,375] {dagrun.py:486} WARNING - Failed to get task '<TaskInstance: divvybikes_elt_pipeline.bq_staging_table_task 2022-02-01 00:00:00+00:00 [removed]>' for dag 'divvybikes_elt_pipeline'. Marking it as removed.
+[2022-04-09 21:27:59,377] {dagrun.py:486} WARNING - Failed to get task '<TaskInstance: divvybikes_elt_pipeline.create_s3_connection 2022-02-01 00:00:00+00:00 [removed]>' for dag 'divvybikes_elt_pipeline'. Marking it as removed.
+[2022-04-09 21:27:59,378] {dagrun.py:486} WARNING - Failed to get task '<TaskInstance: divvybikes_elt_pipeline.upload_file_to_s3 2022-02-01 00:00:00+00:00 [removed]>' for dag 'divvybikes_elt_pipeline'. Marking it as removed.

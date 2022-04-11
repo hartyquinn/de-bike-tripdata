@@ -1,0 +1,126 @@
+[2022-03-31 22:17:37,540] {processor.py:162} INFO - Started process (PID=60) to work on /opt/airflow/dags/extract_load.py
+[2022-03-31 22:17:37,541] {processor.py:613} INFO - Processing file /opt/airflow/dags/extract_load.py for tasks to queue
+[2022-03-31 22:17:37,541] {logging_mixin.py:109} INFO - [2022-03-31 22:17:37,541] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/extract_load.py
+[2022-03-31 22:17:38,443] {logging_mixin.py:109} INFO - [2022-03-31 22:17:38,439] {dagbag.py:329} ERROR - Failed to import: /opt/airflow/dags/extract_load.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 326, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/extract_load.py", line 109, in <module>
+    "file_name":file_object.filename,
+NameError: name 'file_object' is not defined
+[2022-03-31 22:17:38,444] {processor.py:625} WARNING - No viable dags retrieved from /opt/airflow/dags/extract_load.py
+[2022-03-31 22:17:38,464] {processor.py:170} INFO - Processing /opt/airflow/dags/extract_load.py took 0.926 seconds
+[2022-03-31 22:18:08,544] {processor.py:162} INFO - Started process (PID=95) to work on /opt/airflow/dags/extract_load.py
+[2022-03-31 22:18:08,544] {processor.py:613} INFO - Processing file /opt/airflow/dags/extract_load.py for tasks to queue
+[2022-03-31 22:18:08,545] {logging_mixin.py:109} INFO - [2022-03-31 22:18:08,544] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/extract_load.py
+[2022-03-31 22:18:08,747] {logging_mixin.py:109} INFO - [2022-03-31 22:18:08,745] {dagbag.py:329} ERROR - Failed to import: /opt/airflow/dags/extract_load.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 326, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/extract_load.py", line 109, in <module>
+    "file_name":file_object.filename,
+NameError: name 'file_object' is not defined
+[2022-03-31 22:18:08,747] {processor.py:625} WARNING - No viable dags retrieved from /opt/airflow/dags/extract_load.py
+[2022-03-31 22:18:08,759] {processor.py:170} INFO - Processing /opt/airflow/dags/extract_load.py took 0.218 seconds
+[2022-03-31 22:18:38,807] {processor.py:162} INFO - Started process (PID=137) to work on /opt/airflow/dags/extract_load.py
+[2022-03-31 22:18:38,808] {processor.py:613} INFO - Processing file /opt/airflow/dags/extract_load.py for tasks to queue
+[2022-03-31 22:18:38,808] {logging_mixin.py:109} INFO - [2022-03-31 22:18:38,808] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/extract_load.py
+[2022-03-31 22:18:39,085] {logging_mixin.py:109} INFO - [2022-03-31 22:18:39,081] {dagbag.py:329} ERROR - Failed to import: /opt/airflow/dags/extract_load.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 326, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/extract_load.py", line 109, in <module>
+    "file_name":file_object.filename,
+NameError: name 'file_object' is not defined
+[2022-03-31 22:18:39,085] {processor.py:625} WARNING - No viable dags retrieved from /opt/airflow/dags/extract_load.py
+[2022-03-31 22:18:39,102] {processor.py:170} INFO - Processing /opt/airflow/dags/extract_load.py took 0.296 seconds
+[2022-03-31 22:19:09,152] {processor.py:162} INFO - Started process (PID=175) to work on /opt/airflow/dags/extract_load.py
+[2022-03-31 22:19:09,152] {processor.py:613} INFO - Processing file /opt/airflow/dags/extract_load.py for tasks to queue
+[2022-03-31 22:19:09,153] {logging_mixin.py:109} INFO - [2022-03-31 22:19:09,153] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/extract_load.py
+[2022-03-31 22:19:09,379] {logging_mixin.py:109} INFO - [2022-03-31 22:19:09,376] {dagbag.py:329} ERROR - Failed to import: /opt/airflow/dags/extract_load.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 326, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/extract_load.py", line 109, in <module>
+    "file_name":file_object.filename,
+NameError: name 'file_object' is not defined
+[2022-03-31 22:19:09,379] {processor.py:625} WARNING - No viable dags retrieved from /opt/airflow/dags/extract_load.py
+[2022-03-31 22:19:09,394] {processor.py:170} INFO - Processing /opt/airflow/dags/extract_load.py took 0.244 seconds
+[2022-03-31 22:19:39,442] {processor.py:162} INFO - Started process (PID=217) to work on /opt/airflow/dags/extract_load.py
+[2022-03-31 22:19:39,443] {processor.py:613} INFO - Processing file /opt/airflow/dags/extract_load.py for tasks to queue
+[2022-03-31 22:19:39,443] {logging_mixin.py:109} INFO - [2022-03-31 22:19:39,443] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/extract_load.py
+[2022-03-31 22:19:39,648] {logging_mixin.py:109} INFO - [2022-03-31 22:19:39,646] {dagbag.py:329} ERROR - Failed to import: /opt/airflow/dags/extract_load.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 326, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/extract_load.py", line 109, in <module>
+    "file_name":file_object.filename,
+NameError: name 'file_object' is not defined
+[2022-03-31 22:19:39,648] {processor.py:625} WARNING - No viable dags retrieved from /opt/airflow/dags/extract_load.py
+[2022-03-31 22:19:39,664] {processor.py:170} INFO - Processing /opt/airflow/dags/extract_load.py took 0.224 seconds
+[2022-03-31 22:20:09,716] {processor.py:162} INFO - Started process (PID=254) to work on /opt/airflow/dags/extract_load.py
+[2022-03-31 22:20:09,716] {processor.py:613} INFO - Processing file /opt/airflow/dags/extract_load.py for tasks to queue
+[2022-03-31 22:20:09,717] {logging_mixin.py:109} INFO - [2022-03-31 22:20:09,716] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/extract_load.py
+[2022-03-31 22:20:09,926] {logging_mixin.py:109} INFO - [2022-03-31 22:20:09,922] {dagbag.py:329} ERROR - Failed to import: /opt/airflow/dags/extract_load.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 326, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/extract_load.py", line 109, in <module>
+    "file_name":file_object.filename,
+NameError: name 'file_object' is not defined
+[2022-03-31 22:20:09,926] {processor.py:625} WARNING - No viable dags retrieved from /opt/airflow/dags/extract_load.py
+[2022-03-31 22:20:09,940] {processor.py:170} INFO - Processing /opt/airflow/dags/extract_load.py took 0.227 seconds
+[2022-03-31 22:20:39,989] {processor.py:162} INFO - Started process (PID=299) to work on /opt/airflow/dags/extract_load.py
+[2022-03-31 22:20:39,990] {processor.py:613} INFO - Processing file /opt/airflow/dags/extract_load.py for tasks to queue
+[2022-03-31 22:20:39,990] {logging_mixin.py:109} INFO - [2022-03-31 22:20:39,990] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/extract_load.py
+[2022-03-31 22:20:40,217] {logging_mixin.py:109} INFO - [2022-03-31 22:20:40,214] {dagbag.py:329} ERROR - Failed to import: /opt/airflow/dags/extract_load.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 326, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/extract_load.py", line 109, in <module>
+    "file_name":file_object.filename,
+NameError: name 'file_object' is not defined
+[2022-03-31 22:20:40,218] {processor.py:625} WARNING - No viable dags retrieved from /opt/airflow/dags/extract_load.py
+[2022-03-31 22:20:40,232] {processor.py:170} INFO - Processing /opt/airflow/dags/extract_load.py took 0.245 seconds
+[2022-03-31 22:21:10,282] {processor.py:162} INFO - Started process (PID=334) to work on /opt/airflow/dags/extract_load.py
+[2022-03-31 22:21:10,283] {processor.py:613} INFO - Processing file /opt/airflow/dags/extract_load.py for tasks to queue
+[2022-03-31 22:21:10,283] {logging_mixin.py:109} INFO - [2022-03-31 22:21:10,283] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/extract_load.py
+[2022-03-31 22:21:10,499] {logging_mixin.py:109} INFO - [2022-03-31 22:21:10,496] {dagbag.py:329} ERROR - Failed to import: /opt/airflow/dags/extract_load.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 326, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/extract_load.py", line 109, in <module>
+    "file_name":file_object.filename,
+NameError: name 'file_object' is not defined
+[2022-03-31 22:21:10,499] {processor.py:625} WARNING - No viable dags retrieved from /opt/airflow/dags/extract_load.py
+[2022-03-31 22:21:10,512] {processor.py:170} INFO - Processing /opt/airflow/dags/extract_load.py took 0.233 seconds
+[2022-03-31 22:21:40,568] {processor.py:162} INFO - Started process (PID=379) to work on /opt/airflow/dags/extract_load.py
+[2022-03-31 22:21:40,569] {processor.py:613} INFO - Processing file /opt/airflow/dags/extract_load.py for tasks to queue
+[2022-03-31 22:21:40,569] {logging_mixin.py:109} INFO - [2022-03-31 22:21:40,569] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/extract_load.py
+[2022-03-31 22:21:40,944] {logging_mixin.py:109} INFO - [2022-03-31 22:21:40,941] {dagbag.py:329} ERROR - Failed to import: /opt/airflow/dags/extract_load.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 326, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/extract_load.py", line 109, in <module>
+    "file_name":file_object.filename,
+NameError: name 'file_object' is not defined
+[2022-03-31 22:21:40,945] {processor.py:625} WARNING - No viable dags retrieved from /opt/airflow/dags/extract_load.py
+[2022-03-31 22:21:40,962] {processor.py:170} INFO - Processing /opt/airflow/dags/extract_load.py took 0.401 seconds
