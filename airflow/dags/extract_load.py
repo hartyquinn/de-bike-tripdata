@@ -165,11 +165,11 @@ with DAG(
         },
     )
 
-    create_weekly_trips_task = BigQueryInsertJobOperator(
-    task_id="create_weekly_trips_model",
+    create_monthly_trips_task = BigQueryInsertJobOperator(
+    task_id="create_monthly_trips_model",
     configuration={
         "query": {
-            "query": "{% include 'weekly_trips.sql' %}",
+            "query": "{% include 'monthly_trips.sql' %}",
             "useLegacySql": False,
         }
     }
@@ -179,5 +179,5 @@ with DAG(
     download_dataset >> extract_csv >> convert_file_to_parquet >> upload_to_gcs_task >> remove_files >> gcs_to_external_table_task 
     gcs_to_external_table_task >> create_fact_trips_task >> clean_trips_task
     gcs_to_external_table_task >> upsert_dim_stations_task
-    clean_trips_task >> create_weekly_trips_task
-    upsert_dim_stations_task >> create_weekly_trips_task
+    clean_trips_task >> create_monthly_trips_task
+    upsert_dim_stations_task >> create_monthly_trips_task
